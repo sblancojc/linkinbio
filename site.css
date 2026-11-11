@@ -581,6 +581,8 @@
   .ph-square{width:290px; height:290px; border-radius:18px;}
   .ph-square img{object-position:50% 15%;}
   .ph-circle{width:210px; height:210px; border-radius:50%;}
+  .ph-rect{width:240px; height:360px; border-radius:6px;}
+  .ph-rect img{object-position:50% 30%;}
   .ph-arch{width:250px; height:330px; border-radius:125px 125px 14px 14px;}
   .ph-arch img{object-position:50% 25%;}
   .intro{display:grid; grid-template-columns:auto 1fr; gap:44px; align-items:center; max-width:900px; margin:0 auto 44px;}
@@ -593,8 +595,12 @@
     .intro .section-head{text-align:center;}
     .intro .ph, .split-hero .ph{margin:0 auto; order:-1;}
     .page-hero .split-hero .lead{margin:14px auto 0;}
-    .ph-tall{width:240px; height:300px;} .ph-square{width:220px; height:220px;} .ph-circle{width:180px; height:180px;} .ph-arch{width:200px; height:264px; border-radius:100px 100px 12px 12px;}
+    .ph-tall{width:240px; height:300px;} .ph-rect{width:200px; height:300px;} .ph-square{width:220px; height:220px;} .ph-circle{width:180px; height:180px;} .ph-arch{width:200px; height:264px; border-radius:100px 100px 12px 12px;}
   }
+
+  /* Phone header: bigger tap targets, no overflow on small phones */
+  @media (max-width:520px){ header .theme-btn, header .lang-btn{height:34px; min-width:34px;} }
+  @media (max-width:370px){ .fa-actions{flex-wrap:wrap;} header .theme-btn{display:none;} header .nav-cta{gap:5px;} header .nav{gap:6px;} }
 
   /* Compact footer */
   footer{padding:28px 0 16px;}
